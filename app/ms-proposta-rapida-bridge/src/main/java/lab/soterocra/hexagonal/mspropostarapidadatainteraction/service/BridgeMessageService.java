@@ -29,7 +29,14 @@ public class BridgeMessageService {
 
     public void send(Message message) {
         try {
+            if (message.getMessage().equals("/start")) {
+                log.info("Respondendo userId (chatId)");
+                sendUserId(message.getUserId());
+                return;
+            }
+
             User user = getUserById(message.getUserId());
+
             if (user.getRole().equals(ROLE_EMPLOYEE)) {
                 List<User> usersSupervisor = getUsersSupervisor();
                 log.info("Enviando Mensagem para Gerentes.");
@@ -83,6 +90,13 @@ public class BridgeMessageService {
         HttpResponse<String> response = Unirest.post("https://api.telegram.org/" + telegramToken + "/sendMessage")
                 .header("Content-Type", "application/json")
                 .body(String.format("{\"chat_id\":%s,\"text\":\"#ID: %s\nNome: %s\nTelefone: %s\nMensagem: %s...\"}", to, from.getUserId(), from.getName(), from.getPhone(), message.getMessage()))
+                .asString();
+    }
+
+    private void sendUserId(String to) throws UnirestException {
+        HttpResponse<String> response = Unirest.post("https://api.telegram.org/" + telegramToken + "/sendMessage")
+                .header("Content-Type", "application/json")
+                .body(String.format("{\"chat_id\":%s,\"text\":\"#ID: %s\"}", to, to))
                 .asString();
     }
 }
