@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Rápida</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Open+Sans&family=Playfair+Display&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rainstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+    </script>
+    <script src="integration.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Cadastro</a></li>
+                <li><a href="table.html">Listagem</a></li>
+            </ul>
+        </nav>
+        <h1>Proposta Rápida</h1>
+        <hr class="hr3">
+    </header>
+    <main>
+        <h2>Novo Usuário</h2>
+        <form id="cadastro" class="linha">
+            <div class="col-dg-3">
+                <label for="userId">ID Telegram</label><br>
+                <input type="number" id="userId" placeholder="Insira o ID de usuário" required>
+            </div>
+            <div class="col-dg-3">
+                <label for="cpf">CPF</label><br>
+                <input type="number" id="cpf" placeholder="Informe o CPF" required>
+            </div>
+            <div class="col-dg-6">
+                <label for="name">Nome</label><br>
+                <input type="text" id="name" placeholder="Informe o nome completo" required>
+            </div>
+
+            <div class="col-dg-3">
+                <label for="phone">Telefone</label><br>
+                <input type="tel" id="phone" placeholder="Informe o telefone" required>
+            </div>
+
+            <div class="col-dg-3">
+                <label for="email">Email</label><br>
+                <input type="email" id="email" placeholder="Informe o email" required>
+            </div>
+
+            <div class="col-dg-3">
+                <label for="role">Função</label><br>
+                <select id="role">
+                    <option value="empty"></option>
+                    <option value="employee">Revendedor</option>
+                    <option value="supervisor">Supervisor</option>
+                </select>
+            </div>
+
+            <div class="col-dg-3 button">
+                <button type="submit" id="submit" class="btn btn-salvar">Salvar</button>
+                <button type="reset" id="reset" class="btn btn-cancelar">Limpar</button>
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>

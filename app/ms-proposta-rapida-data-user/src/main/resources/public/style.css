@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+ul {
+	background-color:black;
+	list-style:none;
+	text-align:right;
+	padding: 15px;
+	margin:0px;
+}
+ul li {
+	display: inline;
+	font-size:15px;
+}
+ul li a {
+	color:white;
+	text-decoration: none;
+	color: white;
+	padding:15px;
+	transition: all 0.4s;
+	background-position: -80px 17px;	
+}
+ul li a:hover {
+	color: black;
+	background-color:white;
+	padding-left:50px;
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	background-size: 27px 27px;
+}
+ul li:nth-child(1) a:hover {
+    background-image:url('img/home.png');
+}
+ul li:nth-child(2) a:hover {
+	background-image:url('img/user.png');
+}
+header h1 {
+    color: black;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 10px;
+    text-align:center;
+    font-weight: bold;
+}
+.hr3 {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #CCC, transparent);  
+}
+  /*Body da Tela: Novo Usuário*/
+main h2 {
+    text-align: left;
+    padding: 15px;
+    padding-left: 50px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    background-color: #F5F5F5;
+}
+form {
+    width: 1000px;
+    margin: auto;
+    font-weight: bold;
+}
+form > div {
+    padding-left: 20px;
+    padding: 8px;
+}
+input[type=text] { 
+    border-radius:4px;
+    width: 95%;
+    height: 27px;
+    border: 1px solid grey;
+}
+input[type=tel] { 
+    border-radius:4px;
+    width: 95%;
+    height: 27px;
+    border: 1px solid grey;
+}
+input[type=email] { 
+    border-radius:4px;
+    width: 95%;
+    height: 27px;
+    border: 1px solid grey;
+}
+input[type=number] { 
+    border-radius:4px;
+    width: 95%;
+    height: 27px;
+    border: 1px solid grey;
+}
+select{
+    border-radius:4px;
+    width: 95%;
+    height: 27px;
+}
+.button {
+    height: 64px;
+    text-align: center;
+    padding-top: 15px;
+}
+.btn {
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+.btn-salvar {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    margin-right: 10px;
+}
+.btn-salvar:hover {
+background-color: #4CAF50;
+color: white;
+}
+.btn-cancelar {
+background-color: white; 
+color: black; 
+border: 2px solid rgb(241, 24, 24); 
+}
+.btn-cancelar:hover {
+background-color: rgb(241, 24, 24);
+color: white;
+}
+
+  /*Body da Tela: - Lista de Usuários*/
+table {
+    width: 1250px;
+    margin: auto;
+    font-weight: bold;
+    border-radius:4px;
+}
+th, td {
+    border: 1px solid grey;
+    height: 27px;
+    width: 100%;
+    border-radius:4px;
+    margin: 2px;
+}
+td {
+    font-size: 15px;
+    font-weight: normal;
+    padding-left: 5px;
+}
+.cabecalho {
+    background-color: #F5F5F5;
+    padding-top: 3px;
+}
+
+.buttontable {
+    text-align: left;
+    padding-left: 5px;
+    border: none;
+}
+.btntable {
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    padding: 3px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+.btn-excluir {
+    text-align: center;
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(241, 24, 24);
+}
+.btn-excluir:hover {
+    background-color: rgb(241, 24, 24);
+    color: white;
+}
