@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "84b2e440-973e-423f-8e33-8bf88bf50302",
+		"name": "hexagonal-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "telegram",
+			"item": [
+				{
+					"name": "setWebHook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.telegram.org/bot{{TELEGRAM_TOKEN}}/setWebhook?url=https://93e8b75d9215.ngrok.io/telegram-hook",
+							"protocol": "https",
+							"host": [
+								"api",
+								"telegram",
+								"org"
+							],
+							"path": [
+								"bot{{TELEGRAM_TOKEN}}",
+								"setWebhook"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://93e8b75d9215.ngrok.io/telegram-hook"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendMessage (Revendedor para Gerente)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"chat_id\": 269027903,\n    \"text\": \"Olá...\",\n    \"reply_markup\": {\n        \"one_time_keyboard\": true,\n        \"keyboard\": [\n            [\n                {\n                    \"text\": \"🔴 Negar. ID: 269027903\"\n                },\n                {\n                    \"text\": \"🟢 Aceitar. ID: 269027903\"\n                }\n            ]\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.telegram.org/bot{{TELEGRAM_TOKEN}}/sendMessage",
+							"protocol": "https",
+							"host": [
+								"api",
+								"telegram",
+								"org"
+							],
+							"path": [
+								"bot{{TELEGRAM_TOKEN}}",
+								"sendMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendMessage (Gerente para Revendedor)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"chat_id\": 269027903,\n    \"text\": \"Olá...\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.telegram.org/bot{{TELEGRAM_TOKEN}}/sendMessage",
+							"protocol": "https",
+							"host": [
+								"api",
+								"telegram",
+								"org"
+							],
+							"path": [
+								"bot{{TELEGRAM_TOKEN}}",
+								"sendMessage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-proposta-rapida-data-user",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"1826103008\",\n    \"cpf\": \"21312311233\",\n    \"name\": \"MARIA Jesuita\",\n    \"email\": \"aaa@gmail.com\",\n    \"phone\": \"343223221\",\n    \"role\": \"employee\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllSupervisor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/users/supervisors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"users",
+								"supervisors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllEmployee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/users/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"users",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/users/222222",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"users",
+								"222222"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/users/269027903",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"users",
+								"269027903"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
